@@ -82,7 +82,7 @@ def build_pdf(title, issues, ai_summary):
 # AI summary
 def ethical_report(issues, language):
     if not issues:
-        return f"✅ No major issues detected by the current {language} rules."
+        return f"No major issues detected by the current {language} rules."
     prompt = {
         "role": "user",
         "content": (
@@ -260,7 +260,7 @@ def ts_iter_matches(lang, root, query_src: str, code: str):
     for m in q.matches(root, bytes(code, "utf8")):
         yield m
 
-#                     JAVASCRIPT ANALYZER (AST + regex)
+# JAVASCRIPT ANALYZER (AST + regex)
 
 # Regex MVP (shared across languages)
 GENERIC_SECRET_RX = re.compile(r"(?i)(api[_-]?key|secret|token)\s*[:=]\s*['\"][^'\"]+['\"]")
@@ -532,7 +532,7 @@ if run_btn and code:
 
     st.subheader("Findings")
     if not findings:
-        st.write("✅ No issues found by current rule set.")
+        st.write("No issues found by current rule set.")
     else:
         for f in findings:
             line_str = f" (Line {f['line']})" if f.get("line") else ""
