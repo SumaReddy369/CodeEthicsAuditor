@@ -1,0 +1,6 @@
+streamlit
+openai
+reportlab
+regex
+tree_sitter
+tree_sitter_languages
